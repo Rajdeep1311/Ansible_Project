@@ -1,0 +1,19 @@
+- 
+ name: This is a simple html project
+ hosts: servers
+ become: yes
+ tasks:
+   - name: Install nginx
+     apt:
+       name: nginx
+       state: latest
+
+   - name: Start nginx
+     service:
+       name: nginx
+       state: started
+
+   - name: Deploy webpage
+     copy: 
+       src: indexpage.html
+       dest: /var/www/html 
