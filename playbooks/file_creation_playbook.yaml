@@ -1,0 +1,10 @@
+---
+
+- name: This Playbook will create a file
+  hosts: servers
+  become: yes
+  tasks:
+    - name: Creating a file
+      file:
+        path: "/home/ubuntu/file.txt"
+        state: touch
