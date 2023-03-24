@@ -1,0 +1,19 @@
+---
+  
+- name: This Playbook will install docker
+  hosts: all
+  become: true
+  tasks:
+  - name: Add Docker GPG apt Key
+    apt_key:
+      url: https://download.docker.com/linux/ubuntu/gpg
+      state: present
+
+  - name: Add Docker repository
+    apt_repository:
+      repo: deb https://download.docker.com/linux/ubuntu focal stable
+      state: present
+  - name: Install docker.
+    apt:
+      name: docker-ce
+      state: latest
