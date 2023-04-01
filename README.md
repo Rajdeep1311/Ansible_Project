@@ -36,4 +36,11 @@ sudo apt-get install terraform
 
 <h3>Note : The following commands may differ according to the AMI used to create the instance(s)</h3>
 
+
+The following command is used to export the key-pair login file to the host server :
+```sh
+  scp -i <key-pair.pem> key-pair.pem ubuntu@ec2-43-207-209-136.ap-northeast-1.compute.amazonaws.com:/home/ubuntu/.ssh
+ ```
+
+
 # The Turn 
