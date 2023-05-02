@@ -71,4 +71,50 @@ So, the stage is set for the act but we should perform a final check, just to be
  
  https://docs.ansible.com/ansible/2.9/modules/list_of_all_modules.html
  
+ An Ansible playbook is a file containing a series of tasks and configurations to be executed on remote hosts. Here is an example of a basic Ansible playbook:
+ 
+ ```sh
+ ---
+- name: My playbook
+  hosts: my_hosts
+  become: true
+  vars:
+    my_var: "my_value"
+  tasks:
+    - name: Install packages
+      apt:
+        name:
+          - package1
+          - package2
+        state: present
+
+    - name: Create directory
+      file:
+        path: /my/directory
+        state: directory
+        owner: root
+        group: root
+        mode: '0755'
+
+    - name: Copy file
+      copy:
+        src: /path/to/local/file
+        dest: /path/to/remote/file
+        owner: root
+        group: root
+        mode: '0644'
+```
+ Inventories are created namely **development** and **production** to group the remote servers accoordingly and also to deploy certain actions according to the need.
+ 
+ # The Prestige
+ 
+ Now, the final part i.e. rolling out the actions to the required servers.
+ 
+ ```sh
+ ansible-playbook <playbook_name>.yaml
+ ```
+ You can now check the required server instances to check if the playbooks are working properly.
+ 
+
+ 
  
