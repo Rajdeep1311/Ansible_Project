@@ -82,7 +82,7 @@ So, the stage is set for the act but we should perform a final check, just to be
         group: root
         mode: '0644'
 ```
- Inventories are created namely **development** and **production** to group the remote servers accoordingly and also to deploy certain actions according to the need.
+ Inventories are created namely **development** and **production** to group the remote servers accordingly and also to deploy certain actions according to the need.
  
  # The Prestige
  
@@ -91,7 +91,7 @@ So, the stage is set for the act but we should perform a final check, just to be
  ```sh
  ansible-playbook <playbook_name>.yaml
  ```
- You can now check the required server instances to check if the playbooks are working properly.
+ You can now check the required server instances to see if the playbooks work properly.
  
 
  
