@@ -3,7 +3,7 @@
 ![image](https://user-images.githubusercontent.com/113296626/228025105-8b03c9f0-3549-47af-9a30-1d381aae6300.png)
 
 # The Pledge
-Created 3-4 EC2 t2.micro instances using the Amazon Machine Image as Ubuntu, designated one of them as the host/master server and the others are termed as nodes. The host server will eventually roll out the updates and changes to the nodes using Ansible which is an Infrastructure as a Code tool. After the instances are up and running, following commands are used to install Ansible :
+Created 3-4 EC2 t2.micro instances using the Amazon Machine Image as Ubuntu, designated one of them as the host/master server and the others are termed as nodes. The host server will eventually roll out the updates and changes to the nodes using Ansible which is an Infrastructure as a Code tool. After the instances are up and running, the following commands are used to install Ansible :
 
 ```sh
 sudo apt update
@@ -92,7 +92,3 @@ So, the stage is set for the act but we should perform a final check, just to be
  ansible-playbook <playbook_name>.yaml
  ```
  You can now check the required server instances to see if the playbooks work properly.
- 
-
- 
- 
