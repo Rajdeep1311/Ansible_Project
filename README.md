@@ -34,7 +34,7 @@ And give the hosts file read access using :
 
 # The Turn 
 
-So, the stage is set for the act but we should perform a final check, just to be sure. Using the following command :
+So, the stage is set for the act but we should perform a final check, just to be sure. Using the following commands :
 ```sh
  ansible servers -m ping
  ```
