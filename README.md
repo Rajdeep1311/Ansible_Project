@@ -19,7 +19,7 @@ The following command is used to export the key-pair login file to the host serv
  scp -i <key-pair.pem> key-pair.pem ubuntu@ec2-43-207-209-136.ap-northeast-1.compute.amazonaws.com:/home/ubuntu/.ssh
  ```
 
-We need to include the host servers' IP Addresses and the key that was imported earlier in the hosts file using the following command :
+We need to include the host servers' IP Addresses and the key that was imported earlier in the host file using the following command :
 ```sh
  sudo nano /etc/ansible/hosts
  ```
@@ -34,7 +34,7 @@ And give the hosts file read access using :
 
 # The Turn 
 
-So, the stage is set for the act but we should perform a final check, just to be sure. Using the following commands :
+So, the stage is set for the act, but we should perform a final check to be sure. Using the following commands :
 ```sh
  ansible servers -m ping
  ```
@@ -85,7 +85,7 @@ So, the stage is set for the act but we should perform a final check, just to be
  
  # The Prestige
  
- Now, the final part i.e. rolling out the actions to the required servers.
+ The final part i.e. rolling out the actions to the required servers.
  
  ```sh
  ansible-playbook <playbook_name>.yaml
